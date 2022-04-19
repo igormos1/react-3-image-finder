@@ -2,7 +2,7 @@
 
 import React, {Component} from 'react';
 import styles from './App.module.css';
-import imagesApi from "../servises/images-api";
+import imagesApi from "./servises/images-api";
 import Searchbar from './Searchbar';
 import Loader from "./Loader";
 import Button from './Button';
