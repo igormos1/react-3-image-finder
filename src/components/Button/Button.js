@@ -1,7 +1,6 @@
 import styles from './Button.module.css';
 import propTypes from 'prop-types';
 
-
 const Button = ({onClick}) => {
     return(
         <button

@@ -1,13 +1,13 @@
+
+
 import React, {Component} from 'react';
 import styles from './App.module.css';
-import Notiflix from 'notiflix';
-import imagesApi from "../Servises/images-api";
+import imagesApi from "../servises/images-api";
 import Searchbar from './Searchbar';
 import Loader from "./Loader";
 import Button from './Button';
 import ImageGallery from './ImageGallery';
 import Modal from './Modal';
-import { animateScroll as scroll } from "react-scroll";
 
 class App extends Component {
   state = {
@@ -24,12 +24,8 @@ class App extends Component {
   componentDidUpdate(prevProps, prevState) {
     if (prevState.searchQuery !== this.state.searchQuery) {
         this.fetchImages();
-        window.scrollBy(0, 400);
     }
-    if(this.state.images.length > 12) {
-          scroll.scrollToBottom();
-        }
-    }
+  }
 
   onChangeQuery = (query) => {
     this.setState({
@@ -49,13 +45,10 @@ class App extends Component {
     const options = {currentPage, searchQuery};
 
     this.setState({isLoading: true});
-   
+
     imagesApi(options)    
     .then(({hits}) =>{
-      if(hits.length===0) {
-        Notiflix.Notify.info('No images found');
-        return;
-      }
+      
       this.setState( prevState =>({
         images: [...prevState.images, ...hits],
         currentPage: prevState.currentPage + 1
@@ -64,9 +57,6 @@ class App extends Component {
     })
     .catch(error => this.setState({error}))
     .finally(this.setState({isLoading: false}));
-    
-    
-    
 }
 
   toggleModal = () => {
@@ -89,15 +79,11 @@ class App extends Component {
     
     return(
       <div className={styles.app}>
-      {error && Notiflix.Notify.failure(error)}
+      {error && alert("Error")}
       <Searchbar onSubmit={this.onChangeQuery}/>
-      {isLoading && <Loader />}      
+      {isLoading && <Loader />}
       {images.length > 0 && <ImageGallery openModal={this.openModal} images={images}/>}
-      {shouldRenderLoadMoreButton && 
-      
-        <Button onClick={this.fetchImages}/>
-      
-      }
+      {shouldRenderLoadMoreButton && <Button onClick={this.fetchImages}/>}
       {showModal && <Modal largeImg={this.largeImageURL} onClose={this.toggleModal}/>}
       </div>
     )
