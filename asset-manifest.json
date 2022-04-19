@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/react-3-image-finder/static/css/main.a0248dc0.css",
-    "main.js": "/react-3-image-finder/static/js/main.4fe55a37.js",
+    "main.css": "/react-3-image-finder/static/css/main.ae2bb672.css",
+    "main.js": "/react-3-image-finder/static/js/main.f9240281.js",
     "static/js/787.6b7abe35.chunk.js": "/react-3-image-finder/static/js/787.6b7abe35.chunk.js",
     "index.html": "/react-3-image-finder/index.html",
-    "static/media/search.svg": "/react-3-image-finder/static/media/search.4cf82edcb9fc406a14bbbe0692baead7.svg",
-    "main.a0248dc0.css.map": "/react-3-image-finder/static/css/main.a0248dc0.css.map",
-    "main.4fe55a37.js.map": "/react-3-image-finder/static/js/main.4fe55a37.js.map",
+    "static/media/search.svg": "/react-3-image-finder/static/media/search.5623ce4d53e14f1369ec49d427170dbd.svg",
+    "main.ae2bb672.css.map": "/react-3-image-finder/static/css/main.ae2bb672.css.map",
+    "main.f9240281.js.map": "/react-3-image-finder/static/js/main.f9240281.js.map",
     "787.6b7abe35.chunk.js.map": "/react-3-image-finder/static/js/787.6b7abe35.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a0248dc0.css",
-    "static/js/main.4fe55a37.js"
+    "static/css/main.ae2bb672.css",
+    "static/js/main.f9240281.js"
   ]
 }
